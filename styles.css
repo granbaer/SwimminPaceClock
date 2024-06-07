@@ -1,0 +1,92 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f0f0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+.clock {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 10px solid #333;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.number {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: bold;
+	top: 50%;
+	left: 50%;
+	transform-origin: center center;
+	margin-top: -15px;
+	margin-left: -15px;
+}
+
+.tick-mark {
+	position: absolute;
+	width: 4px;
+	height: 2px;
+	background-color: #333;
+	top: 50%;
+	left: 50%;
+	transform-origin: center top;
+}
+
+.tick-mark-long {
+	position: absolute;
+	width: 8px;
+	height: 4px;
+	background-color: #333;
+	top: 50%;
+	left: 50%;
+	transform-origin: center top;
+}
+
+.hand {
+	position: absolute;
+	width: 49%;
+	height: 8px;
+	right: 50%;
+	top: 146px;
+	border: 1px solid navy;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	transform-origin: 100%;
+	transform: rotate(90deg); /* Start at the 12 o'clock position */
+}
+
+#second-hand {
+	background-color: red;
+}
+
+.blue-hand {
+	background-color: blue;
+}
+
+.yellow-hand {
+	background-color: orange;
+}
+
+.green-hand {
+	background-color: green;
+}
+
+.clock::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #333;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
